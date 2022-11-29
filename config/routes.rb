@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 # get '/birds/:id', to: 'birds#show'
 
 #using rails resources, that enforces RESFUL conventions 
-  resources :birds
+#only requiring the intended methods 
+  resources :birds, only:[:index, :show]
 end
